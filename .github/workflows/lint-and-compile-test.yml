@@ -21,7 +21,7 @@ jobs:
     - name: Installing dependencies
       run: pnpm install --frozen-lockfile
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         
     - name: Lint code
       run: pnpm run lint
@@ -42,12 +42,12 @@ jobs:
       with:
         node-version-file: .node-version
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           
     - name: Installing dependencies
       run: pnpm install --frozen-lockfile
       env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
     - name: Test compile
       run: pnpm run build
